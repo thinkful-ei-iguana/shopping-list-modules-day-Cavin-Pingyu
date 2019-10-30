@@ -136,8 +136,7 @@ const bindEventListeners = function() {
     handleToggleFilterClick();
 };
 
-console.log(store);
-console.log(foo);
+
 
 // This object contains the only exposed methods from this module:
 export default {
