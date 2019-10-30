@@ -19,9 +19,9 @@ function addItem(name) {
 
 }
 
-function findAndToggleChecked(id) {
-  this.findById();
 
+function findAndToggleChecked(id) {
+  let specItem = this.findById(id); specItem.checked = !specItem.checked; 
 }
 
 function findAndUpdateName(id) {
