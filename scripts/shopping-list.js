@@ -1,3 +1,4 @@
+import item from './item.js';
 import store from './store.js';
 
 const generateItemElement = function(item) {
