@@ -4,24 +4,24 @@ let items = [];
 let hideCheckedItems = false;
 
 function findById(id) {
-    store.items.find(ele => {
-        return store.items.ele;
-    })
-};
+    items.find(ele => {
+        return items.ele;
+    });
+}
 
 function addItem(name) {
     try {
         item.validateName(name);
         this.items.push(item.create(name));
     } catch (error) {
-
+        console.log(`Cannot add item: ${error.message}`);
     }
-    render();
-};
+
+}
 
 function findAndToggleChecked(id) {
     this.findById();
-    render();
+
 }
 
 function findAndUpdateName(id) {
@@ -31,15 +31,19 @@ function findAndUpdateName(id) {
     } catch (error) {
         console.log(`Cannot update name: ${error.message}`);
     }
-    render();
+
 }
 
 function findAndDelete(id) {
-    this.items.splice(item.find(id), 1);
-    render();
+    items.splice(findById(id), 1);
 }
 
 export default {
     items,
     hideCheckedItems,
+    addItem,
+    findAndDelete,
+    findById,
+    findAndToggleChecked,
+    findAndUpdateName
 };
