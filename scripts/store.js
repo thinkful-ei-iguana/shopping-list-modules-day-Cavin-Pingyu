@@ -38,7 +38,9 @@ function findAndUpdateName(id) {
 }
 
 function findAndDelete(id) {
-    items.splice(findById(id), 1);
+    if (items.id === id) {
+        items.splice(findById(id), 1);
+    }
 }
 
 export default {
