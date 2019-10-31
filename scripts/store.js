@@ -38,10 +38,14 @@ function findAndUpdateName(id) {
 }
 
 function findAndDelete(id) {
-    if (items.id === id) {
-        items.splice(findById(id), 1);
-    }
+    let index = this.items.findIndex(item => item.id === id);
+    this.items.splice(index, 1);
 }
+
+const toggleCheckFilter = function() {
+    this.hideCheckedItems = !this.hideCheckedItems;
+};
+
 
 export default {
     items,
@@ -50,5 +54,6 @@ export default {
     findAndDelete,
     findById,
     findAndToggleChecked,
-    findAndUpdateName
+    findAndUpdateName,
+    toggleCheckFilter
 };
